@@ -4,7 +4,7 @@ import {Component} from 'react'
 import './index.css'
 
 class Feedback extends Component {
-  state = {isFeedbackSelected: true}
+  state = {isFeedbackSelected: false}
 
   clickEmoji = () => this.setState({isFeedbackSelected: true})
 
@@ -16,15 +16,19 @@ class Feedback extends Component {
       <div>
         <h1 className="title">
           {' '}
-          How satisfied are you with our customer support performence?
+          How satisfied are you with our customer support performance?
         </h1>
-        <ul className="emoji-list">
+        <ul className="emoji-card">
           {emojis.map(emoji => (
-            <li key={emoji.id} className="emoji">
-              <button onClick={this.clickEmoji} type="button">
+            <li key={emoji.id} className="emoji-list">
+              <button
+                onClick={this.clickEmoji}
+                type="button"
+                className="emoji-btn"
+              >
                 <img className="emoji-img" src={emoji.imageUrl} alt="name" />{' '}
                 <br />
-                <span className="name"> {emoji.name}</span>
+                <span className="name"> {emoji.name} </span>
               </button>
             </li>
           ))}
@@ -37,7 +41,7 @@ class Feedback extends Component {
     const {resources} = this.props
     const {loveEmojiUrl} = resources
 
-    return(
+    return (
       <div>
         <img src={loveEmojiUrl} alt="love emoji" className="emoji-img" />
         <h1 className="title">Thank You!</h1>
@@ -45,7 +49,7 @@ class Feedback extends Component {
           {' '}
           We will use your feedback to improve our customer support performance.
         </p>
-      </div>,
+      </div>
     )
   }
 

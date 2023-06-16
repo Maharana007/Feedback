@@ -18,28 +18,39 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  height: 40%;
 }
 .title {
   font-family: 'Roboto';
   font-size: 25px;
   font-weight: 500;
 }
-.emoji-list {
+.emoji-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.emoji {
+
+.emoji-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  margin: 20px;
 }
 .details {
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 500;
+}
+.emoji-img {
+  height: 50px;
+}
+.emoji-btn {
+  height: 20px;
+  border: none;
+  background-color: transparent;
 }
